@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI College Selection System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend.css') }}">
+</head>
+
+<body>
+
+<!-- ================= HERO SECTION ================= -->
+<div class="hero">
+    <div class="content">
+        <h1>AI College Selection System</h1>
+        <button id="openForm">Get Started</button>
+    </div>
+
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="formModal">
+
+    <div class="form-box">
+
+        <span class="close">&times;</span>
+
+        <h2>Student Details</h2>
+
+        <form id="predictionForm">
+
+            <input type="text" name="name" placeholder="Enter Name" required>
+
+            <input type="number" name="rank" placeholder="Enter Rank" required>
+
+            <select name="category" required>
+                <option value="">Select Category</option>
+                <option>OC</option>
+                <option>OC_EWS</option>
+                <option>BCA</option>
+                <option>BCB</option>
+                <option>BCC</option>
+                <option>BCD</option>
+                <option>BCE</option>
+                <option>SC</option>
+                <option>ST</option>
+            </select>
+
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option>BOYS</option>
+                <option>GIRLS</option>
+            </select>
+
+            <select name="branch" required>
+                <option value="">Select Branch</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>IT</option>
+                <option>AIML</option>
+                <option>CSM</option>
+                <option>MECH</option>
+                <option>CIV</option>
+            </select>
+
+            <button type="submit">Predict Colleges</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ================= RESULT SECTION ================= -->
+<div id="result" class="result-overlay"></div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
